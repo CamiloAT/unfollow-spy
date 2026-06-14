@@ -1,5 +1,7 @@
 import React, { useState, useMemo } from 'react';
 
+const CURRENT_TIME = Date.now();
+
 const SearchInputIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="11" cy="11" r="8"></circle>
@@ -75,7 +77,7 @@ export const UserList = ({ users, title, emptyMessage, statusMessage, searchEmpt
 
   const getDaysAgo = (timestamp) => {
     if (!timestamp) return null;
-    const days = Math.floor((Date.now() - timestamp * 1000) / (1000 * 60 * 60 * 24));
+    const days = Math.floor((CURRENT_TIME - timestamp * 1000) / (1000 * 60 * 60 * 24));
     return days;
   };
 
