@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useInstagramData } from '../hooks/useInstagramData';
 import { UploadSection } from './UploadSection';
 import { UserList } from './UserList';
@@ -56,6 +56,7 @@ export const AnalyzePage = () => {
   } = useInstagramData();
 
   const [activeTab, setActiveTab] = useState('traitors');
+  const tabsRef = useRef(null);
 
   return (
     <div className="analyze-page-container">
@@ -76,11 +77,18 @@ export const AnalyzePage = () => {
         calculateTraitors={() => {
            calculateTraitors();
            setActiveTab('traitors');
+           setTimeout(() => {
+             if (tabsRef.current) {
+               const rect = tabsRef.current.getBoundingClientRect();
+               const offset = window.scrollY + rect.top - 120;
+               window.scrollTo({ top: offset, behavior: 'smooth' });
+             }
+           }, 150);
         }}
       />
 
       {hasAnalyzed && (
-        <div className="view-tabs">
+        <div className="view-tabs" ref={tabsRef}>
           <button 
             className={`view-tab ${activeTab === 'traitors' ? 'active' : ''}`}
             onClick={() => setActiveTab('traitors')}
