@@ -666,6 +666,17 @@ body, html, #root {
   font-weight: 800;
   color: #1f2937;
   margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.search-icon-gradient {
+  vertical-align: middle;
+  margin-left: 4px;
+  margin-top: -4px;
+  stroke: url(#ig-gradient-title);
 }
 
 .analyze-subtitle {

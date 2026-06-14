@@ -4,7 +4,7 @@
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
-![jsPDF](https://img.shields.io/badge/jsPDF-D32F2F?style=for-the-badge&logo=pdf&logoColor=white)
+![jsPDF](https://img.shields.io/badge/jsPDF-D32F2F?style=for-the-badge&logo=file-icons&logoColor=white)
 
 A **100% local and secure** web tool that audits your Instagram followers directly in your browser. Upload your official Meta data export, and UnfollowSpy cross-references your followers and following lists instantly — no passwords, no servers, no risk of bans.
 
