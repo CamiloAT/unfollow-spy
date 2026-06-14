@@ -4,6 +4,7 @@
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![jsPDF](https://img.shields.io/badge/jsPDF-D32F2F?style=for-the-badge&logo=pdf&logoColor=white)
 
 A **100% local and secure** web tool that audits your Instagram followers directly in your browser. Upload your official Meta data export, and UnfollowSpy cross-references your followers and following lists instantly — no passwords, no servers, no risk of bans.
 
@@ -16,6 +17,7 @@ A **100% local and secure** web tool that audits your Instagram followers direct
 * **Comprehensive Time Analysis:** Decodes UNIX timestamps from Meta exports to show exactly how many days since someone started following you.
 * **Smart Validations:** Prevents errors through rigorous verification of the original export files (`followers_1.json` and `following.json`).
 * **Optimal Performance:** Super-fast SPA architecture with instant cross-referencing of data.
+* **PDF Reports:** Download a detailed PDF report with selected data (traitors, followers, following). Choose what to include before exporting.
 
 ---
 
@@ -80,7 +82,8 @@ Proyecto Instagram/
     │   ├── AnalyzePage.jsx          ← Upload & analysis view
     │   ├── UserList.jsx             ← Followers/following list display
     │   ├── UploadSection.jsx        ← File upload component
-    │   └── TutorialModal.jsx        ← Step-by-step tutorial modal
+    │   ├── TutorialModal.jsx        ← Step-by-step tutorial modal
+    │   └── ReportModal.jsx          ← PDF report selection & generation
     │
     ├── hooks/
     │   └── useInstagramData.js      ← Custom hook for data parsing & processing
@@ -105,6 +108,7 @@ Proyecto Instagram/
 | Routing | React Router DOM v7 |
 | Build Tool | Vite 8 |
 | Styling | Custom CSS (Variables, Keyframe Animations, Flexbox/Grid) |
+| PDF Generation | jsPDF |
 | Architecture | SPA (Single Page Application) |
 
 ---
