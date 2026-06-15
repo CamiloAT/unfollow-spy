@@ -5,6 +5,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 ![jsPDF](https://img.shields.io/badge/jsPDF-D32F2F?style=for-the-badge&logo=file-icons&logoColor=white)
+![Lucide](https://img.shields.io/badge/Lucide-000000?style=for-the-badge&logo=lucide&logoColor=white)
 
 A **100% local and secure** web tool that audits your Instagram followers directly in your browser. Upload your official Meta data export, and UnfollowSpy cross-references your followers and following lists instantly — no passwords, no servers, no risk of bans.
 
@@ -18,6 +19,7 @@ A **100% local and secure** web tool that audits your Instagram followers direct
 * **Smart Validations:** Prevents errors through rigorous verification of the original export files (`followers_1.json` and `following.json`).
 * **Optimal Performance:** Super-fast SPA architecture with instant cross-referencing of data.
 * **PDF Reports:** Download a detailed PDF report with selected data (traitors, followers, following). Choose what to include before exporting.
+* **Dark Mode:** Automatic theme detection based on system preference. Toggle between light and dark modes with persistent preference.
 
 ---
 
@@ -83,10 +85,15 @@ Proyecto Instagram/
     │   ├── UserList.jsx             ← Followers/following list display
     │   ├── UploadSection.jsx        ← File upload component
     │   ├── TutorialModal.jsx        ← Step-by-step tutorial modal
-    │   └── ReportModal.jsx          ← PDF report selection & generation
+    │   ├── ReportModal.jsx          ← PDF report selection & generation
+    │   └── DarkModeProvider.jsx     ← Dark mode context provider
+    │
+    ├── context/
+    │   └── DarkModeContext.jsx       ← Dark mode React context
     │
     ├── hooks/
-    │   └── useInstagramData.js      ← Custom hook for data parsing & processing
+    │   ├── useInstagramData.js      ← Custom hook for data parsing & processing
+    │   └── useDarkMode.js           ← Dark mode toggle hook
     │
     ├── styles/
     │   └── index.css                ← Component & layout styles
@@ -108,7 +115,9 @@ Proyecto Instagram/
 | Routing | React Router DOM v7 |
 | Build Tool | Vite 8 |
 | Styling | Custom CSS (Variables, Keyframe Animations, Flexbox/Grid) |
+| Icons | Lucide React |
 | PDF Generation | jsPDF |
+| Theme | Dark Mode (System preference + manual toggle) |
 | Architecture | SPA (Single Page Application) |
 
 ---
