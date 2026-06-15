@@ -65,7 +65,7 @@ Navigate to the local address provided by the terminal (default: `http://localho
 ## Project Structure
 
 ```text
-Proyecto Instagram/
+unfollow-spy/
 │
 ├── index.html
 ├── package.json
