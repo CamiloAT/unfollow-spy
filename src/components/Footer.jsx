@@ -55,7 +55,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} UnfollowSpy. Creado con pasión y agilidad local.</p>
+          <p>© {new Date().getFullYear()} UnfollowSpy. Auditoría de seguidores.</p>
         </div>
       </footer>
       {renderModal()}
